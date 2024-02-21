@@ -4,8 +4,11 @@
   "description": "Basic example of a UI Extension built with HubSpot's React developer tools",
   "scripts": {
     "postinstall": "cd ./src/app/extensions/ && npm install && cd ../app.functions && npm install",
-    "build": "npm run build --prefix ./src/app/extensions/"
+    "build": "webpack --config ./src/app/extensions/webpack.config.js"
   },
   "author": "HubSpot",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.90.3"
+  }
 }
